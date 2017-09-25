@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8B313B881F74E57D008B5B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B313B871F74E57D008B5B5C /* AppDelegate.swift */; };
-		8B313B8A1F74E57D008B5B5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B313B891F74E57D008B5B5C /* ViewController.swift */; };
+		8B313B8A1F74E57D008B5B5C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B313B891F74E57D008B5B5C /* SignInVC.swift */; };
 		8B313B8D1F74E57D008B5B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B8B1F74E57D008B5B5C /* Main.storyboard */; };
 		8B313B8F1F74E57D008B5B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B8E1F74E57D008B5B5C /* Assets.xcassets */; };
 		8B313B921F74E57D008B5B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B901F74E57D008B5B5C /* LaunchScreen.storyboard */; };
+		8B313B9A1F74E9BA008B5B5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B991F74E9BA008B5B5C /* GoogleService-Info.plist */; };
+		CB2CB60C6CFCFE7B75E36EF5 /* Pods_SSMPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCADD06C86A9C2129572E67 /* Pods_SSMPrototype.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2669750419A5B996FA4FEB63 /* Pods-SSMPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSMPrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSMPrototype/Pods-SSMPrototype.release.xcconfig"; sourceTree = "<group>"; };
+		3BCADD06C86A9C2129572E67 /* Pods_SSMPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSMPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F4C1BA17747926D1F3DA5B /* Pods-SSMPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSMPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSMPrototype/Pods-SSMPrototype.debug.xcconfig"; sourceTree = "<group>"; };
 		8B313B841F74E57D008B5B5C /* SSMPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSMPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B313B871F74E57D008B5B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B313B891F74E57D008B5B5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B313B891F74E57D008B5B5C /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8B313B8C1F74E57D008B5B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B313B8E1F74E57D008B5B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B313B911F74E57D008B5B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B313B931F74E57D008B5B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B313B991F74E9BA008B5B5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2CB60C6CFCFE7B75E36EF5 /* Pods_SSMPrototype.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B9026F275A8255FC6FAFB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45F4C1BA17747926D1F3DA5B /* Pods-SSMPrototype.debug.xcconfig */,
+				2669750419A5B996FA4FEB63 /* Pods-SSMPrototype.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48D539AF674F8CFD5E3D3659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BCADD06C86A9C2129572E67 /* Pods_SSMPrototype.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B313B7B1F74E57D008B5B5C = {
 			isa = PBXGroup;
 			children = (
 				8B313B861F74E57D008B5B5C /* SSMPrototype */,
 				8B313B851F74E57D008B5B5C /* Products */,
+				34B9026F275A8255FC6FAFB7 /* Pods */,
+				48D539AF674F8CFD5E3D3659 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		8B313B861F74E57D008B5B5C /* SSMPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				8B3B54E91F78F36E00CC72BB /* Model */,
+				8B3B54EA1F78F37500CC72BB /* View */,
+				8B3B54EB1F78F37B00CC72BB /* Controller */,
+				8B313B991F74E9BA008B5B5C /* GoogleService-Info.plist */,
 				8B313B871F74E57D008B5B5C /* AppDelegate.swift */,
-				8B313B891F74E57D008B5B5C /* ViewController.swift */,
 				8B313B8B1F74E57D008B5B5C /* Main.storyboard */,
 				8B313B8E1F74E57D008B5B5C /* Assets.xcassets */,
 				8B313B901F74E57D008B5B5C /* LaunchScreen.storyboard */,
 				8B313B931F74E57D008B5B5C /* Info.plist */,
 			);
 			path = SSMPrototype;
+			sourceTree = "<group>";
+		};
+		8B3B54E91F78F36E00CC72BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B3B54EA1F78F37500CC72BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B3B54EB1F78F37B00CC72BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B313B891F74E57D008B5B5C /* SignInVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B313B961F74E57D008B5B5C /* Build configuration list for PBXNativeTarget "SSMPrototype" */;
 			buildPhases = (
+				D8ABD689C72412189B11D891 /* [CP] Check Pods Manifest.lock */,
 				8B313B801F74E57D008B5B5C /* Sources */,
 				8B313B811F74E57D008B5B5C /* Frameworks */,
 				8B313B821F74E57D008B5B5C /* Resources */,
+				DDAA9062066C325AB941AF5B /* [CP] Embed Pods Frameworks */,
+				A58AC8C4554B25A3157AEBE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B313B921F74E57D008B5B5C /* LaunchScreen.storyboard in Resources */,
+				8B313B9A1F74E9BA008B5B5C /* GoogleService-Info.plist in Resources */,
 				8B313B8F1F74E57D008B5B5C /* Assets.xcassets in Resources */,
 				8B313B8D1F74E57D008B5B5C /* Main.storyboard in Resources */,
 			);
@@ -130,12 +185,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A58AC8C4554B25A3157AEBE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSMPrototype/Pods-SSMPrototype-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8ABD689C72412189B11D891 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDAA9062066C325AB941AF5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSMPrototype/Pods-SSMPrototype-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B313B801F74E57D008B5B5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B313B8A1F74E57D008B5B5C /* ViewController.swift in Sources */,
+				8B313B8A1F74E57D008B5B5C /* SignInVC.swift in Sources */,
 				8B313B881F74E57D008B5B5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +370,7 @@
 		};
 		8B313B971F74E57D008B5B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4C1BA17747926D1F3DA5B /* Pods-SSMPrototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TNEU4B9URB;
@@ -281,6 +385,7 @@
 		};
 		8B313B981F74E57D008B5B5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2669750419A5B996FA4FEB63 /* Pods-SSMPrototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TNEU4B9URB;
@@ -312,6 +417,7 @@
 				8B313B981F74E57D008B5B5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
