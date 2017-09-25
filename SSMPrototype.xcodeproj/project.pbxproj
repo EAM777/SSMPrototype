@@ -13,6 +13,12 @@
 		8B313B8F1F74E57D008B5B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B8E1F74E57D008B5B5C /* Assets.xcassets */; };
 		8B313B921F74E57D008B5B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B901F74E57D008B5B5C /* LaunchScreen.storyboard */; };
 		8B313B9A1F74E9BA008B5B5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B313B991F74E9BA008B5B5C /* GoogleService-Info.plist */; };
+		8B3B54ED1F79241B00CC72BB /* SICView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B54EC1F79241A00CC72BB /* SICView.swift */; };
+		8B3B54F01F7924A400CC72BB /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B54EF1F7924A400CC72BB /* Contants.swift */; };
+		8BEE9A8B1F793241001F4414 /* RndBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE9A8A1F793241001F4414 /* RndBtn.swift */; };
+		8BEE9A8D1F793653001F4414 /* TxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE9A8C1F793653001F4414 /* TxtField.swift */; };
+		8BEE9A911F793E47001F4414 /* CustomLbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE9A901F793E47001F4414 /* CustomLbl.swift */; };
+		8BEE9A931F794192001F4414 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE9A921F794192001F4414 /* FancyBtn.swift */; };
 		CB2CB60C6CFCFE7B75E36EF5 /* Pods_SSMPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCADD06C86A9C2129572E67 /* Pods_SSMPrototype.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +34,12 @@
 		8B313B911F74E57D008B5B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B313B931F74E57D008B5B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B313B991F74E9BA008B5B5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B3B54EC1F79241A00CC72BB /* SICView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SICView.swift; sourceTree = "<group>"; };
+		8B3B54EF1F7924A400CC72BB /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		8BEE9A8A1F793241001F4414 /* RndBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RndBtn.swift; sourceTree = "<group>"; };
+		8BEE9A8C1F793653001F4414 /* TxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtField.swift; sourceTree = "<group>"; };
+		8BEE9A901F793E47001F4414 /* CustomLbl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLbl.swift; sourceTree = "<group>"; };
+		8BEE9A921F794192001F4414 /* FancyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,7 @@
 		8B313B861F74E57D008B5B5C /* SSMPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				8B3B54EE1F79249100CC72BB /* Util */,
 				8B3B54E91F78F36E00CC72BB /* Model */,
 				8B3B54EA1F78F37500CC72BB /* View */,
 				8B3B54EB1F78F37B00CC72BB /* Controller */,
@@ -103,6 +116,11 @@
 		8B3B54EA1F78F37500CC72BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B3B54EC1F79241A00CC72BB /* SICView.swift */,
+				8BEE9A8A1F793241001F4414 /* RndBtn.swift */,
+				8BEE9A8C1F793653001F4414 /* TxtField.swift */,
+				8BEE9A901F793E47001F4414 /* CustomLbl.swift */,
+				8BEE9A921F794192001F4414 /* FancyBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +131,14 @@
 				8B313B891F74E57D008B5B5C /* SignInVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8B3B54EE1F79249100CC72BB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B54EF1F7924A400CC72BB /* Contants.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B313B8A1F74E57D008B5B5C /* SignInVC.swift in Sources */,
+				8BEE9A8D1F793653001F4414 /* TxtField.swift in Sources */,
+				8B3B54ED1F79241B00CC72BB /* SICView.swift in Sources */,
+				8BEE9A911F793E47001F4414 /* CustomLbl.swift in Sources */,
 				8B313B881F74E57D008B5B5C /* AppDelegate.swift in Sources */,
+				8B3B54F01F7924A400CC72BB /* Contants.swift in Sources */,
+				8BEE9A931F794192001F4414 /* FancyBtn.swift in Sources */,
+				8BEE9A8B1F793241001F4414 /* RndBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,23 +29,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNu-JC-eph">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNu-JC-eph" customClass="SICView" customModule="SSMPrototype" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-Zt-ZB3">
                                         <rect key="frame" x="112" y="53" width="150" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="NFs-qC-b8p"/>
-                                            <constraint firstAttribute="height" constant="60" id="v0h-qo-6gy"/>
-                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2807501007900105" green="0.073198888403556844" blue="0.53876818017816275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99075350340000001" green="1" blue="0.93690343080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstItem="0Yr-Zt-ZB3" firstAttribute="top" secondItem="jNu-JC-eph" secondAttribute="top" constant="53" id="6sI-ou-dHZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Yr-Zt-ZB3" secondAttribute="trailing" constant="113" id="X99-v7-vR5"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Yr-Zt-ZB3" secondAttribute="bottom" constant="54" id="lDE-g6-hca"/>
-                                    <constraint firstItem="0Yr-Zt-ZB3" firstAttribute="leading" secondItem="jNu-JC-eph" secondAttribute="leading" constant="112" id="zaY-gu-YKq"/>
+                                    <constraint firstItem="0Yr-Zt-ZB3" firstAttribute="centerX" secondItem="jNu-JC-eph" secondAttribute="centerX" id="aZE-wF-w5w"/>
+                                    <constraint firstItem="0Yr-Zt-ZB3" firstAttribute="centerY" secondItem="jNu-JC-eph" secondAttribute="centerY" id="fVa-ww-C0G"/>
+                                    <constraint firstAttribute="height" constant="167" id="tP2-5y-LTC"/>
+                                    <constraint firstItem="0Yr-Zt-ZB3" firstAttribute="top" secondItem="jNu-JC-eph" secondAttribute="top" constant="53" id="wlY-Hb-kfl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqH-Gp-sZ8">
@@ -61,7 +60,7 @@
                                         <color key="highlightedColor" red="1" green="0.34709438520000002" blue="0.92172531729999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8784313725490196" green="0.25098039215686274" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99075350340000001" green="1" blue="0.93690343080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="f4b-Nj-fsr" secondAttribute="trailing" constant="16" id="Ymh-HY-Rbb"/>
                                     <constraint firstAttribute="height" constant="65" id="kjX-sk-4sc"/>
@@ -70,10 +69,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-ZT-agf">
-                                <rect key="frame" x="61" y="207.5" width="252" height="252"/>
+                                <rect key="frame" x="69.5" y="214" width="235" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK0-9m-IKA">
-                                        <rect key="frame" x="97.5" y="0.0" width="57" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK0-9m-IKA" customClass="CustomLbl" customModule="SSMPrototype" customModuleProvider="target">
+                                        <rect key="frame" x="89" y="0.0" width="57" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="33I-tk-wwU"/>
                                         </constraints>
@@ -81,8 +80,8 @@
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="1" green="0.34709438516727753" blue="0.92172531731630081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn9-2d-OkI">
-                                        <rect key="frame" x="100.5" y="63" width="51" height="51"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn9-2d-OkI" customClass="RndBtn" customModule="SSMPrototype" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="63" width="51" height="51"/>
                                         <color key="backgroundColor" red="0.3529411764705882" green="0.44313725490196076" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="9sb-Sc-G9y"/>
@@ -91,29 +90,41 @@
                                         <state key="normal" image="f"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dQx-Fr-aEQ">
-                                        <rect key="frame" x="0.0" y="140" width="252" height="112"/>
+                                        <rect key="frame" x="0.0" y="140" width="235" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-xs-sjf">
-                                                <rect key="frame" x="0.0" y="0.0" width="252" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="235" height="100"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rudeboyat@southcentral.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELI-Od-Pqx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="252" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rudeboyat@southcentral.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELI-Od-Pqx" customClass="TxtField" customModule="SSMPrototype" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235" height="24"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="EyB-4W-mPd"/>
+                                                            <constraint firstAttribute="width" constant="235" id="TR3-jc-fUA"/>
+                                                        </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="za5-58-S8R">
-                                                        <rect key="frame" x="0.0" y="40" width="252" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="za5-58-S8R" customClass="TxtField" customModule="SSMPrototype" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="34" width="235" height="24"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="hH9-3S-46I"/>
+                                                            <constraint firstAttribute="width" constant="235" id="tyk-Ul-BMK"/>
+                                                        </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-Xn-C2q">
-                                                        <rect key="frame" x="0.0" y="80" width="252" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-Xn-C2q" customClass="RndBtn" customModule="SSMPrototype" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="68" width="235" height="32"/>
                                                         <color key="backgroundColor" red="0.89519041776657104" green="0.36945143342018127" blue="0.1735723614692688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="235" id="Exd-cH-S2S"/>
+                                                            <constraint firstAttribute="height" constant="32" id="a0r-CD-ulr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="13"/>
                                                         <state key="normal" title="Enter!">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -125,14 +136,15 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91786584424488438" green="0.91786584424488438" blue="0.91786584424488438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jNu-JC-eph" firstAttribute="leading" secondItem="yqH-Gp-sZ8" secondAttribute="leading" id="Bxs-L2-xrM"/>
+                            <constraint firstItem="jNu-JC-eph" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="93P-3n-r7f"/>
+                            <constraint firstItem="jNu-JC-eph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kx0-MH-UMH"/>
                             <constraint firstAttribute="trailing" secondItem="yqH-Gp-sZ8" secondAttribute="trailing" id="P80-md-GtK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yqH-Gp-sZ8" secondAttribute="bottom" id="QlX-wM-tO8"/>
                             <constraint firstItem="Jc2-ZT-agf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bfm-b1-OWq"/>
-                            <constraint firstItem="jNu-JC-eph" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d5g-Ga-p54"/>
                             <constraint firstItem="Jc2-ZT-agf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pBO-oS-NDb"/>
+                            <constraint firstAttribute="trailing" secondItem="jNu-JC-eph" secondAttribute="trailing" id="qCo-5b-GUH"/>
                             <constraint firstItem="yqH-Gp-sZ8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wdF-Vl-hl4"/>
                         </constraints>
                     </view>
