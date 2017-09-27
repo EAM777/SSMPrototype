@@ -10,19 +10,25 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
+
 
 class SignInVC: UIViewController {
+    
     @IBOutlet weak var emailField: TxtField!
     @IBOutlet weak var pwdField: TxtField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            print("SSMPT: ID found in keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+        
     }
 
     @IBAction func FacebookBtnTap(_ sender: AnyObject) {
@@ -50,7 +56,10 @@ class SignInVC: UIViewController {
                 print("SSMPT: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("SSMPT: Successfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
             
+                }
             }
             
             
@@ -62,12 +71,20 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("SSMPT: Email user authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("SSMTP: Unable to Authorize with Firebase using email")
                         } else {
                             print("SSMPT: successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                                
+                            }
+                           
                         }
                         
                     })
@@ -77,6 +94,14 @@ class SignInVC: UIViewController {
             })
         }
     }
+    
+    
+    func completeSignIn(id: String) {
+       let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("SSMPT: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
+    
     
 }
 
