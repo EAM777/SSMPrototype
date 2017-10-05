@@ -81,7 +81,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("SSMPT: ID removed from keychain \(keychainResult)")
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
-
+// the struggle lol T_T.... 
     }
 }
 
