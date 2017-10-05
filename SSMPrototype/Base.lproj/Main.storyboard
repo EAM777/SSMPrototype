@@ -316,7 +316,7 @@
                                                                                 </button>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Amoeba" translatesAutoresizingMaskIntoConstraints="NO" id="xjg-G9-KE6">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Amoeba" translatesAutoresizingMaskIntoConstraints="NO" id="xjg-G9-KE6">
                                                                             <rect key="frame" x="0.0" y="74" width="343" height="140"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="FnC-Zn-MWp"/>
