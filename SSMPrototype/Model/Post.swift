@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import Firebase
 
 class Post {
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
     private var _postKey: String!
+
     
     var caption: String {
         return _caption
@@ -21,7 +23,6 @@ class Post {
     var imageUrl: String {
         return _imageUrl
     }
-    
     
     var likes: Int {
         return _likes
@@ -46,18 +47,15 @@ class Post {
         
         if let imageUrl = postData["imageUrl"] as? String {
             self._imageUrl = imageUrl
-    
-        
         }
         
         if let likes = postData["likes"] as? Int {
             self._likes = likes
+        }
         
     }
+ 
         
-    
-    
-    
-}
+
 
 }
