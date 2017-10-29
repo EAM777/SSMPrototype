@@ -65,6 +65,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            
             if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString) {
                 cell.configureCell(post: post, img: img)
             } else {
