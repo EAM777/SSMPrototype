@@ -33,7 +33,7 @@ class PostCell: UITableViewCell {
             self.postImg.image = img
             
         } else {
-                let ref = Storage.storage().reference(forURL: post.imageUrl)
+            let ref = Storage.storage().reference(forURL: post.imageURL)
             ref.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
                     if error != nil {
                         print("SSMPT: unable to download Img from Firebase Storage")
@@ -42,7 +42,7 @@ class PostCell: UITableViewCell {
                         if let imgData = data {
                             if let img = UIImage(data: imgData) {
                                 self.postImg.image = img
-                                FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                                FeedVC.imageCache.setObject(img, forKey: post.imageURL as NSString)
                         }
                     }
                         

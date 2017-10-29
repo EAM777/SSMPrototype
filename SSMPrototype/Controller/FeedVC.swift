@@ -14,16 +14,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: CircleView!
+    @IBOutlet weak var captionField: TxtField!
     
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
     
-    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,14 +63,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         return posts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let post = posts[indexPath.row]
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            
-            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
+            if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString) {
                 cell.configureCell(post: post, img: img)
-                
             } else {
                 cell.configureCell(post: post)
             }
@@ -87,7 +82,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
                 addImage.image = image
                 imageSelected = true
-                
             } else {
                 print("SSMPT: A valid image wasn't selected")
         }
@@ -110,8 +104,57 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     
+    @IBAction func postBtnTapped(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("SSPMT: caption must be entered")
+            return
+        }
+        guard let img = addImage.image, imageSelected == true else {
+            print("SSMPT: An image must be selected")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imageData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("SSMPT: Unable to upload to firebase storage")
+                } else {
+                    print("SSMPT: Succesfully uploaded image to Firebase Storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                    }
+                }
+            }
+        }
+    } // "URL" is breaking the link
+        // presenting its self as "imageURL" when it should be "imageUrl"
+        // on the firebase. so what ever is writing the post is using the wrong
+        // representation... where is it at???? ^_^ 
     
-
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, AnyObject> = [
+            "caption": captionField.text! as AnyObject,
+            "imageURL": imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+            ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        
+        tableView.reloadData()
+    }
+    
     @IBAction func signOutTapped(_ sender: AnyObject) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("SSMPT: ID removed from keychain \(keychainResult)")
